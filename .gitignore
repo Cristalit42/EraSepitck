@@ -1,8 +1,0 @@
-.idea
-.DS_Store
-.cache
-.git
-yarn.lock
-.parcel-cache
-node_modules
-dist
