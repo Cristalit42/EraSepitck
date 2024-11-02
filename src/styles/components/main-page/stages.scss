@@ -1,0 +1,102 @@
+.stages {
+  @media (max-width: 540px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.stages__list {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 744px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  @media (max-width: 540px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.stages__item {
+  padding: 32px;
+
+  border-radius: 24px;
+
+  @media (max-width: 1024px) {
+    padding: 28px;
+
+    font-size: 15px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 24px;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 28px;
+
+    background-color: $color-light-gray;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--message {
+    &::before {
+      background-image: url("../images/svg/icon-message.svg");
+    }
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../images/svg/icon-phone.svg");
+    }
+  }
+
+  &--people {
+    &::before {
+      background-image: url("../images/svg/icon-people.svg");
+    }
+  }
+
+  &--bag {
+    &::before {
+      background-image: url("../images/svg/icon-bag.svg");
+    }
+  }
+
+  &--settings {
+    &::before {
+      background-image: url("../images/svg/icon-settings.svg");
+    }
+  }
+
+  &--book {
+    &::before {
+      background-image: url("../images/svg/icon-book.svg");
+    }
+  }
+}
+
+.stages__title {
+  margin-bottom: 12px;
+
+  font-size: 24px;
+  line-height: 1.3;
+
+  @media (max-width: 540px) {
+    font-size: 20px;
+  }
+}

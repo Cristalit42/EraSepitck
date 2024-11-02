@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Покупателям</title>
+  <link rel="stylesheet" href="./styles/style.scss" />
+</head>
+
+<body>
+  <include src="./src/templates/header.html"></include>
+  <nav class="breadcrumbs container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="/">Главная</a>
+      </li>
+      <span class="breadcrumbs__line">/</span>
+      <li class="breadcrumbs__item breadcrumbs__item--active">
+        Покупателям
+      </li>
+    </ul>
+  </nav>
+  <section class="text-section section container">
+    <h1 class="text-section__title">
+      Мы собрали <span class="green-text">важную информацию</span>,
+      где вы сможете узнать как оформить заказ, найти шаблон договора и посмотреть сертификаты и награды нашей компании
+    </h1>
+    <p class="text-section__text">
+      Для получения дополнительной информации звоните по телефону <a href="tel:84956699924">8 (495) 669-99-24</a>
+    </p>
+  </section>
+  <section class="customers section container">
+    <a href="how-place-order.html" class="customers__item">
+      <img src="./images/svg/how-place-order.svg" alt="" class="customers__image">
+      Как оформить заказ
+    </a>
+    <a href="support-center.html" class="customers__item">
+      <img src="./images/svg/support-center.svg" alt="" class="customers__image">
+      Центр поддержки
+    </a>
+    <a href="agreement.html" class="customers__item">
+      <img src="./images/svg/treaties.svg" alt="" class="customers__image">
+      Договора
+    </a>
+    <a href="" class="customers__item">
+      <img src="./images/svg/legal-data.svg" alt="" class="customers__image">
+      Юридические данные
+    </a>
+    <a href="certificates.html" class="customers__item">
+      <img src="./images/svg/certificates.svg" alt="" class="customers__image">
+      Сертификаты
+    </a>
+    <a href="awards.html" class="customers__item">
+      <img src="./images/svg/awards.svg" alt="" class="customers__image">
+      Награды
+    </a>
+    <a href="partners.html" class="customers__item">
+      <img src="./images/svg/partners.svg" alt="" class="customers__image">
+      Партнеры
+    </a>
+  </section>
+
+  <include src="./src/templates/consultation.html"></include>
+
+  <include src="./src/templates/footer.html"></include>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЭраСептик</title>
+  <link rel="stylesheet" href="./styles/style.scss">
+</head>
+
+<body>
+  <include src="./src/templates/header.html"></include>
+  <nav class="breadcrumbs container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="/">Главная</a>
+      </li>
+      <span class="breadcrumbs__line">/</span>
+      <li class="breadcrumbs__item breadcrumbs__item--active">
+        Условия доставки
+      </li>
+    </ul>
+  </nav>
+  <section class="text-section section container">
+    <h1 class="text-section__title">
+      Благодаря наличию собственного грузового транспорта мы можем <span class="green-text">самостоятельно осуществить
+        доставку</span> станции и оборудования, по нужному адресу и в оговоренный срок
+    </h1>
+    <p class="text-section__text">
+      По вопросам доставки вы можете позвонить по телефону <nobr>8 (495) 669-99-24</nobr> в любой день с 9:00 до 19:00
+    </p>
+  </section>
+  <section class="delivery section container">
+    <div class="delivery__item">
+      <div class="info-block info-block--no-image">
+        <div class="info-block__wrapper">
+          <div class="info-block__icon">
+            <img src="images/svg/vectortruck.svg" alt="Иконка ограниченного времени">
+          </div>
+          <div class="info-block__content">
+            <h2 class="info-block__title no-animation">Сроки и правила доставки</h2>
+            <p class="info-block__text">
+              Доставка осуществляется <b>на следующий день, если заказ был подтвержден до 12 часов.</b> Товар, имеющийся
+              в наличии на складе, будет доставлен на следующий рабочий день. Товар, который будет собираться под заказ
+              с момента оформления заказа – на третий день. Ориентировочное <b>время доставки с 9:11 (не ранее) до
+                18:00</b> или позже по договоренности. Более подробную информацию уточняйте у вашего менеджера.
+            </p>
+            <p class="info-block__text">
+              Доставка осуществляется только <b>до указанного адреса.</b>
+            </p>
+            <p class="info-block__text">
+              Клиент должен обеспечить <b>беспрепятственный въезд к месту отгрузки</b>. В случае, если ограничения есть
+              и о них не было заранее обговорено, то водитель паркуется в ближайшем доступном месте, не противоречащем
+              правилам ПДД. В этом случае доставка считается совершенной.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery__item">
+      <div class="info-block info-block--no-image">
+        <div class="info-block__wrapper">
+          <div class="info-block__icon">
+            <img src="images/svg/vectorcard.svg" alt="Иконка стоимости доставки">
+          </div>
+          <div class="info-block__content">
+            <h2 class="info-block__title no-animation">Стоимость доставки</h2>
+            <p class="info-block__description">Доставка складывается из следующего:</p>
+            <ol class="info-block__list">
+              <li class="info-block__list-item">
+                от склада производителя 60 руб. за 1км.
+              </li>
+              <li class="info-block__list-item">
+                возможна <b>бесплатная доставка товара по специальным акциям</b> — проекторов дороже 250 000 рублей.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery__item">
+      <div class="info-block info-block--no-image">
+        <div class="info-block__wrapper">
+          <div class="info-block__icon">
+            <img src="images/svg/vectorbox.svg" alt="Иконка ограниченного времени">
+          </div>
+          <div class="info-block__content">
+            <h2 class="info-block__title no-animation">Порядок получения товара</h2>
+            <p class="info-block__text">Доставка осуществляется только <b>по предварительному звонку утром в день
+                доставки!</b> Обзвон клиентов начинается с 9.30 утра, поэтому держите Ваши мобильные телефоны
+              включенными и доступными для ответа. В противном случае, при не дозвоне до 10.30 доставка автоматически
+              переносится на следующий рабочий день. Обратите особое внимание на наши правила и рекомендации.</p>
+            <p class="info-block__text">Просьба оставлять несколько номеров телефонов для связи. Пожалуйста, будьте по
+              адресу и на связи в оговоренный для доставки день. <b>Курьер будет ожидать Вас в течение 20 минут, после
+                звонка (сообщения, если на звонок не ответили) о прибытии.</b> Повторная доставка оплачивается
+              дополнительно. Это вынужденная мера, защищающая интерес других клиентов, кто так же ждет доставки.</p>
+            <p class="info-block__text">В случае отказа от товара после осуществления доставки при надлежащем качестве и
+              комплектности, курьеру оплачивается стоимость обратной доставки в размере стоимости доставки (на основании
+              п.п.3,4 ст. 497 ГК РФ).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="delivery__item">
+      <div class="info-block info-block--no-image">
+        <div class="info-block__wrapper">
+          <div class="info-block__icon">
+            <img src="images/svg/vectorbuilding.svg" alt="Иконка ограниченного времени">
+          </div>
+          <div class="info-block__content">
+            <h2 class="info-block__title no-animation">Для юридических лиц</h2>
+            <p class="info-block__text">Если доставка юридическому лицу, то у Вас должна быть <b>доверенность или
+                печать.</b> При отсутствии оных или неправильно оформленных, экспедитор не имеет права передавать вам
+              товар.</p>
+            <p class="info-block__text">Доверенность от имени юридического лица выдается за подписью его руководителя и
+              главного бухгалтера или иных лиц, уполномоченных на то в соответствии с законом и учредительными
+              документами (п. 4, ст. 185.1 ГК РФ) (ФАКСИМИЛЬНАЯ ПОДПИСЬ НЕ ДОПУСКАЕТСЯ!). В строке доверенности ”
+              получение груза от” должно быть правильное <a href="#">наименование нашей компании</a>, если забор груза
+              производится по 2 счетам, то в доверенность вписывается 2 номера счета.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <include src="./src/templates/consultation.html"></include>
+  <include src="./src/templates/footer.html"></include>
+</body>
+
+</html>

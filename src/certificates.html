@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сертификаты</title>
+  <link rel="stylesheet" href="./styles/style.scss">
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet">
+</head>
+
+<body>
+  <include src="./src/templates/header.html"></include>
+  <nav class="breadcrumbs container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="/">Главная</a>
+      </li>
+      <span class="breadcrumbs__line">/</span>
+      <li class="breadcrumbs__item">
+        <a href="customers.html">Покупателям</a>
+      </li>
+      <span class="breadcrumbs__line">/</span>
+      <li class="breadcrumbs__item breadcrumbs__item--active">
+        Сертификаты
+      </li>
+    </ul>
+  </nav>
+  <section class="text-section section container">
+    <h1 class="text-section__title">
+      Компания <span class="orange-text">Эра</span><span class="green-text">Септик</span> имеет множество сертификатов,
+      которые подтверждают высокое качество нашей продукции
+    </h1>
+    <p class="text-section__text">
+      Наша команда экспертов всегда готова предоставить вам квалифицированную поддержку и ответить на любые вопросы
+    </p>
+  </section>
+  <section class="documents section container">
+    <div class="documents__items">
+      <div class="documents__item">
+        <p class="documents__description"><b>Экспертное заключение №048</b></p>
+        <div class="documents__wrapper">
+          <img src="./images/png/certificate.png" data-fancybox="gallery" alt="Сертификат 1" class="documents__image">
+          <img class="documents__zoom" src="./images/svg/zoom.svg" alt="">
+        </div>
+      </div>
+
+      <div class="documents__item">
+        <p class="documents__description"><b>Протокол испытания продукции</b></p>
+        <div class="documents__wrapper">
+          <img src="./images/png/certificate1.png" data-fancybox="gallery" alt="Сертификат 1" class="documents__image">
+          <img class="documents__zoom" src="./images/svg/zoom.svg" alt="">
+        </div>
+      </div>
+
+      <div class="documents__item">
+        <p class="documents__description"><b>Протокол экспертизы продукции</b></p>
+        <div class="documents__wrapper">
+          <img src="./images/png/certificate2.png" data-fancybox="gallery" alt="Сертификат 1" class="documents__image">
+          <img class="documents__zoom" src="./images/svg/zoom.svg" alt="">
+        </div>
+      </div>
+
+      <div class="documents__item">
+        <p class="documents__description"><b>Декларация о соответствии</b></p>
+        <div class="documents__wrapper">
+          <img src="./images/png/certificate3.png" data-fancybox="gallery" alt="Сертификат 1" class="documents__image">
+          <img class="documents__zoom" src="./images/svg/zoom.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <include src="./src/templates/consultation.html"></include>
+  <include src="./src/templates/footer.html"></include>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+</body>
+
+</html>

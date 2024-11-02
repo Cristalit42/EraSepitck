@@ -1,0 +1,25 @@
+.delivery {
+  display: grid;
+
+  grid-template-columns: calc(61.5% - 10px) calc(38.5% - 10px);
+  grid-gap: 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 744px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 540px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.delivery__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

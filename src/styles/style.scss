@@ -1,0 +1,132 @@
+@import "./vars/colors.scss";
+@import "./vars/sizes.scss";
+@import "./vars/animation.scss";
+@import "./vars/font.scss";
+
+@import "./components/container.scss";
+@import "./components/button.scss";
+@import "./components/header.scss";
+@import "./components/catalog.scss";
+@import "./components/footer.scss";
+@import "./components/info-block.scss";
+@import "./components/tap-bar.scss";
+@import "./components/breadcrumbs.scss";
+@import "./components/documents.scss";
+@import "./components/menu-mobile.scss";
+
+@import "./components/text-section.scss";
+@import "./components/consultation.scss";
+
+@import "./components/rating.scss";
+
+// Main page
+@import "./components/main-page/header-lead.scss";
+@import "./components/main-page/reasons.scss";
+@import "./components/main-page/sale.scss";
+@import "./components/main-page/stages.scss";
+@import "./components/main-page/installation.scss";
+@import "./components/main-page/product.scss";
+@import "./components/main-page/services.scss";
+@import "./components/main-page/order-call.scss";
+@import "./components/main-page/completed-objects.scss";
+@import "./components/main-page/reviews.scss";
+@import "./components/main-page/about-company.scss";
+@import "./components/main-page/blog.scss";
+
+// Pages
+@import "./about.scss";
+@import "./guarantee.scss";
+@import "./promotion.scss";
+@import "./how-place-order.scss";
+@import "./support-center.scss";
+@import "./partners.scss";
+@import "./legal-data.scss";
+@import "./delivery.scss";
+@import "./refund.scss";
+@import "./certificates.scss";
+@import "./agreement.scss";
+@import "./stock-card.scss";
+@import "./customers.scss";
+@import "./services.scss";
+
+// Стили для текста
+
+%button-base {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  font-size: $font-size-base;
+
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: $font-weight-regular;
+  font-size: $font-size-base;
+  line-height: 1.3;
+  font-family: $font-family, sans-serif;
+  color: $color-dark;
+}
+
+.index-lead {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 900px) {
+    .header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: relative;
+    bottom: -1px;
+
+    display: block;
+    width: 100%;
+    height: 60px;
+
+    background: $color-white;
+    border-radius: 60px 60px 0 0;
+
+    @media (max-width: 1024px) {
+      height: 40px;
+
+      border-radius: 40px 40px 0 0;
+    }
+
+    @media (max-width: 540px) {
+      height: 20px;
+    }
+  }
+}
+
+.overflow {
+  position: fixed;
+  inset: -50px;
+  z-index: -1;
+
+  background-color: rgba($black, 0.4);
+  opacity: 0;
+
+  transition: opacity $transition-speed linear;
+
+  pointer-events: none;
+}
