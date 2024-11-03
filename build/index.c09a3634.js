@@ -1,5 +1,5 @@
 /**
- * Swiper 11.1.12
+ * Swiper 11.1.14
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: September 1, 2024
+ * Released on: September 12, 2024
  */ /**
  * SSR Window 4.0.2
  * Better handling for window object in SSR environment
@@ -2104,7 +2104,7 @@ function $4e95c04dd8a5890d$var$onTouchStart(event) {
         preventDefault = false;
         if (targetEl.nodeName === "SELECT") data.isTouched = false;
     }
-    if (document1.activeElement && document1.activeElement.matches(data.focusableElements) && document1.activeElement !== targetEl) document1.activeElement.blur();
+    if (document1.activeElement && document1.activeElement.matches(data.focusableElements) && document1.activeElement !== targetEl && (e.pointerType === "mouse" || e.pointerType !== "mouse" && !targetEl.matches(data.focusableElements))) document1.activeElement.blur();
     const shouldPreventDefault = preventDefault && swiper.allowTouchMove && params.touchStartPreventDefault;
     if ((params.touchStartForcePreventDefault || shouldPreventDefault) && !targetEl.isContentEditable) e.preventDefault();
     if (params.freeMode && params.freeMode.enabled && swiper.freeMode && swiper.animating && !params.cssMode) swiper.freeMode.onTouchStart();
@@ -2165,6 +2165,7 @@ function $4e95c04dd8a5890d$var$onTouchMove(event) {
             }
         } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate()) return;
     }
+    if (document1.activeElement && document1.activeElement.matches(data.focusableElements) && document1.activeElement !== e.target && e.pointerType !== "mouse") document1.activeElement.blur();
     if (document1.activeElement) {
         if (e.target === document1.activeElement && e.target.matches(data.focusableElements)) {
             data.isMoved = true;
@@ -4173,7 +4174,7 @@ function $3ede398f6665eb67$export$2e2bcd8739ae039(_ref) {
     function getEl(el) {
         let res;
         if (el && typeof el === "string" && swiper.isElement) {
-            res = swiper.el.querySelector(el);
+            res = swiper.el.querySelector(el) || swiper.hostEl.querySelector(el);
             if (res) return res;
         }
         if (el) {
@@ -5268,6 +5269,7 @@ function $da01103e1a8fa261$export$2e2bcd8739ae039(_ref) {
         clearTimeout(allowTouchMoveTimeout);
         swiper.touchEventsData.preventTouchMoveFromPointerMove = true;
         allowTouchMoveTimeout = setTimeout(()=>{
+            if (swiper.destroyed) return;
             allowTouchMove();
         });
     }
